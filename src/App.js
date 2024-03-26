@@ -3,10 +3,10 @@ import './App.css';
 
 function App() {
 
-  const sendDataToAndroid = async(info) => {
+  function sendDataToAndroid(info) {
     console.log(info);
-      // AndroidInterface.sendData(info);
-      window.postMessage("Hi, It's from web page");
+      AndroidInterface.sendData(info);
+      // window.postMessage("Hi, It's from web page");
   }
 
   return (
