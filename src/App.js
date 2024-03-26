@@ -2,6 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const sendDataToAndroid = async(info) => {
+    console.log(info);
+      // AndroidInterface.sendData(info);
+      window.postMessage("Hi, It's from web page");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => sendDataToAndroid('Hi')}>Send</button>
       </header>
     </div>
   );
