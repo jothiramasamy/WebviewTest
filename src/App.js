@@ -5,7 +5,7 @@ function App() {
 
   function sendDataToAndroid(info) {
     console.log(info);
-      AndroidInterface.sendData(info);
+    window.AndroidInterface.sendData(info);
       // window.postMessage("Hi, It's from web page");
   }
 
