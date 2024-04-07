@@ -5,8 +5,7 @@ function App() {
 
   function sendDataToAndroid(info) {
     console.log(info);
-    window.AndroidInterface.sendData(info);
-      // window.postMessage("Hi, It's from web page");
+    window.AndroidInterface.sendDataToNative(info);
   }
 
   return (
@@ -24,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={() => sendDataToAndroid('Hi')}>Send</button>
+        <button onClick={() => sendDataToAndroid("{'message': 'Hi Jo, It from web page'}")}>Send</button>
       </header>
     </div>
   );
