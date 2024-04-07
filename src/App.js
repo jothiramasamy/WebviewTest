@@ -4,8 +4,8 @@ import './App.css';
 function App() {
 
   function sendDataToAndroid(info) {
-    // console.log(info);
-    window.AndroidInterface.sendData(info);
+    console.log(info);
+    window.AndroidInterface.sendDataToNative(info);
   }
 
   return (
